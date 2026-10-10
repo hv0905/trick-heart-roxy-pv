@@ -21,11 +21,11 @@
 3. 安装依赖并构建：
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python tools/build.py --check
-.venv/bin/python tools/build.py --version v4
-.venv/bin/python tools/review_server.py --port 8847
+uv venv # if venv not present
+uv pip install -r requirements.txt
+uv run tools/build.py --check
+uv run tools/build.py --version v4
+uv run tools/review_server.py --port 8847
 ```
 
 打开 http://127.0.0.1:8847/review.html 。输出位于`deliverables/`，可切换正片、中文字幕和同步对比，支持逐帧、慢放与片段循环。
